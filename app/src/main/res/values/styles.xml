@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorPrimary" format="color" />
+    <attr name="colorBg1" format="color" />
+    <attr name="colorBg2" format="color" />
+    <attr name="colorBg3" format="color" />
+    <attr name="colorTextWhite" format="color" />
+    <attr name="bg" format="reference" />
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDefault</item>
+        <item name="colorBg1">@color/colorBgDefault1</item>
+        <item name="colorBg2">@color/colorBgDefault2</item>
+        <item name="colorBg3">@color/colorBgDefault3</item>
+        <item name="colorTextWhite">@color/colorTextWhite</item>
+        <item name="bg">@drawable/pic_10</item>
+    </style>
+
+    <style name="app_skin_1" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimarySkin1</item>
+        <item name="colorBg1">@color/colorBgDefault1Skin1</item>
+        <item name="colorBg2">@color/colorBgDefault1Skin2</item>
+        <item name="colorBg3">@color/colorBgDefault1Skin3</item>
+        <item name="bg">@drawable/pic_11</item>
+    </style>
+
+    <style name="app_skin_2" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimarySkin2</item>
+        <item name="colorBg1">@color/colorBgDefault2Skin1</item>
+        <item name="colorBg2">@color/colorBgDefault2Skin2</item>
+        <item name="colorBg3">@color/colorBgDefault2Skin3</item>
+        <item name="bg">@drawable/pic_12</item>
+    </style>
+</resources>
