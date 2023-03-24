@@ -1,4 +1,4 @@
-package com.example.changetheme;
+package com.example.module_dynamic;
 
 import android.content.Context;
 import android.content.SharedPreferences;

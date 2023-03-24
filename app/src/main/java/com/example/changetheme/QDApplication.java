@@ -7,6 +7,8 @@ import android.content.res.Configuration;
 
 import androidx.annotation.NonNull;
 
+import com.example.module_dynamic.QDSkinManager;
+
 //APP加载QDSkinManager并适配深色模式
 public class QDApplication extends Application {
 
@@ -29,9 +31,9 @@ public class QDApplication extends Application {
         super.onConfigurationChanged(newConfig);
         //适配 Dark Mode
         if ((newConfig.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
-            QDSkinManager.changeSkin(QDSkinManager.SKIN_2);
+            QDSkinManager.changeSkin(context,QDSkinManager.SKIN_2);
         } else if (QDSkinManager.getCurrentSkin() == QDSkinManager.SKIN_2) {
-            QDSkinManager.changeSkin(QDSkinManager.SKIN_DEFAULT);
+            QDSkinManager.changeSkin(context,QDSkinManager.SKIN_DEFAULT);
         }
     }
 }

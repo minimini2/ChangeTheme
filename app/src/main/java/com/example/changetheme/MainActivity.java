@@ -1,17 +1,21 @@
 package com.example.changetheme;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.LayoutInflaterCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.example.module_dynamic.DynamicMain;
+import com.example.module_dynamic.QDSkinManager;
 import com.qmuiteam.qmui.skin.QMUISkinLayoutInflaterFactory;
 import com.qmuiteam.qmui.skin.QMUISkinManager;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private QMUISkinManager skinManager;
     private Button btn;
     private int skinIndex;
@@ -43,13 +47,24 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(skinIndex + 1 > 3){
-                    skinIndex = 0;
-                }
-                skinIndex += 1;
-                QDSkinManager.changeSkin(skinIndex);
+//                if(skinIndex + 1 > 3){
+                    fragmentJump(DynamicMain.class);
+//                    skinIndex = 0;
+//                }
+//                skinIndex += 1;
+//                QDSkinManager.changeSkin(skinIndex);
             }
         });
+    }
+
+    private void fragmentJump(Class<?> aClass) {
+        FragmentTransaction ft =getSupportFragmentManager().beginTransaction();
+        try {
+            ft.replace(R.id.fl_container, (Fragment) aClass.newInstance());
+            ft.commitAllowingStateLoss();
+        } catch (IllegalAccessException | InstantiationException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

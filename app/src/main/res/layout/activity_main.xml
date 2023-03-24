@@ -54,4 +54,12 @@
         android:layout_centerHorizontal="true"
         app:qmui_skin_background="?attr/bg"/>
 
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:splitMotionEvents="false"
+        android:windowEnableSplitTouch="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </RelativeLayout>

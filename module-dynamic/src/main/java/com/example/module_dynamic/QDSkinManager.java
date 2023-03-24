@@ -1,4 +1,4 @@
-package com.example.changetheme;
+package com.example.module_dynamic;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -10,6 +10,7 @@ public class QDSkinManager {
     public static final int SKIN_DEFAULT = 1;
     public static final int SKIN_1 = 2;
     public static final int SKIN_2 = 3;
+    private static Context context1;
 
     public static void install(Context context) {
         QMUISkinManager skinManager = QMUISkinManager.defaultInstance(context);
@@ -28,13 +29,14 @@ public class QDSkinManager {
         }
     }
 
-    public static void changeSkin(int index) {
-        QMUISkinManager.defaultInstance(QDApplication.getContext()).changeSkin(index);
-        QDPreferenceManager.getInstance(QDApplication.getContext()).setSkinIndex(index);
+    public static void changeSkin(Context context,int index) {
+        context1 = context;
+        QMUISkinManager.defaultInstance(context).changeSkin(index);
+        QDPreferenceManager.getInstance(context).setSkinIndex(index);
     }
 
     public static int getCurrentSkin() {
-        return QMUISkinManager.defaultInstance(QDApplication.getContext()).getCurrentSkin();
+        return QMUISkinManager.defaultInstance(context1).getCurrentSkin();
     }
 }
 
