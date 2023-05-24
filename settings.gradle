@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ChangeTheme"
 include ':app'
-include ':module-dynamic'
+include ':lib_skin'
+include ':test-skin'

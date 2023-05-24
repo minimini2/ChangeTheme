@@ -1,65 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:qmui_skin_background="?attr/colorPrimary"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/v1"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:qmui_skin_background="?attr/colorBg2" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Title Bar"
-            android:textSize="16sp"
-            app:qmui_skin_text_color="?attr/colorTextWhite" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/v2"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/v1"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:qmui_skin_background="?attr/colorBg1" />
-
-    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
-        android:id="@+id/btn"
-        android:layout_marginTop="10dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_show"
         android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/v2"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        app:qmui_radius="10dp"
-        app:qmui_skin_background="?attr/colorBg3"
-        app:qmui_skin_text_color="?attr/colorTextWhite"
-        app:qmui_skin_border="?attr/colorBg2"
-        android:text="change skin" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/btn"
-        android:layout_centerHorizontal="true"
-        app:qmui_skin_background="?attr/bg"/>
-
-    <FrameLayout
-        android:id="@+id/fl_container"
-        android:splitMotionEvents="false"
-        android:windowEnableSplitTouch="false"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_marginTop="124dp"
+        android:text="当前皮肤状态"
+        android:textColor="#f00"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="切换皮肤"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <FrameLayout-->
+<!--        android:id="@+id/fl_container"-->
+<!--        android:splitMotionEvents="false"-->
+<!--        android:windowEnableSplitTouch="false"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  只有app:skin_ignore = true 忽略当前属性，不处理 -->
+    <attr name="skin_ignore" format="boolean" />
+</resources>
